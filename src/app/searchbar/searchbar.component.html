@@ -1,0 +1,8 @@
+<mat-card>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="Search Users" id="query" name="query" (keydown.enter)="search()"
+           [(ngModel)]="model.query">
+  </mat-form-field>
+  <button mat-raised-button (click)="search()">Search</button>
+</mat-card>
