@@ -7,7 +7,6 @@ import {map, Observable} from "rxjs";
 })
 export class GithubService {
   private userSearchApi = 'https://api.github.com/search/users'
-  public searchResultsObservable!: Observable<any>;
 
   constructor(private http: HttpClient) {
     console.log('Github Service Ready...');

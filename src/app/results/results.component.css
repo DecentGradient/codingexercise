@@ -1,3 +1,10 @@
 .full-width-table {
   width: 100%;
 }
+.avatar {
+  width: auto;
+  height: 30px;
+}
+.profileLink {
+  color: #c6d2e3;
+}

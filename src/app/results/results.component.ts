@@ -10,7 +10,7 @@ import {StateService} from '../state.service';
 })
 export class ResultsComponent implements OnInit {
   dataSource: any;
-  displayedColumns = ['id', 'login'];
+  displayedColumns = ['id', 'login','avatar',"profile"];
 
   constructor(private state: StateService) {
   }
