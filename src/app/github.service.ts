@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient,HttpParams} from '@angular/common/http';
 import {map, Observable} from "rxjs";
 
 @Injectable({
@@ -13,13 +13,19 @@ export class GithubService {
 
   }
 
-  search(searchTerm: string) {
+  search(searchTerm: string,page:number,pageSize:number): Observable<any> {
 
-    const url = this.userSearchApi + '?q=' + searchTerm;
-    return this.http.get(url).pipe(
+    const url = this.userSearchApi;
+    return this.http.get(url,{
+      params:new HttpParams()
+        .set('q',searchTerm)
+        .set('per_page',pageSize.toString())
+        .set('page',page.toString())
+
+    }).pipe(
       map(response => {
         // @ts-ignore
-        return response['items']})
+        return {total_count:response.total_count,items:response['items']}})
     )
 
   }

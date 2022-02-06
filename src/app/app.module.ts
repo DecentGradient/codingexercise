@@ -17,6 +17,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import {MatButtonModule} from "@angular/material/button";
 import {HttpClientModule} from "@angular/common/http";
 import {ResultsDatasource} from "./results/results.datasource";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import {ResultsDatasource} from "./results/results.datasource";
       storageBucket: "codingexercise-08757.appspot.com",
       messagingSenderId: "531622562386",
       appId: "1:531622562386:web:1f361eea144ccd5c096d8b",
-      measurementId: "G-Z7N992FBRC" })),
+      measurementId: "G-Z7N992FBRC"
+    })),
     HttpClientModule,
     FormsModule,  // <-- import FormsModule before binding with [(ngModel)]
     MatCardModule,
@@ -45,6 +48,8 @@ import {ResultsDatasource} from "./results/results.datasource";
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
 
   ],
   providers: [ResultsDatasource],
